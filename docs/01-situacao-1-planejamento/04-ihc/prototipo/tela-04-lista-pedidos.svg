@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="Arial, Helvetica, sans-serif">
+<rect width="960" height="620" fill="#ffffff"/>
+<rect x="0" y="0" width="960" height="34" rx="4" fill="#e6e8eb" stroke="none" stroke-width="1.2"/>
+<circle cx="18" cy="17" r="6" fill="#e06c5a"/>
+<circle cx="36" cy="17" r="6" fill="#e3b341"/>
+<circle cx="54" cy="17" r="6" fill="#5fb36b"/>
+<rect x="80" y="8" width="600" height="18" rx="9" fill="#fff" stroke="#c9ced4" stroke-width="1.2"/>
+<text x="92" y="21" font-size="11" fill="#666" text-anchor="start">pedidofacil.exemplo.com/Pedidos</text>
+<rect x="0" y="34" width="960" height="46" rx="0" fill="#f1f3f5" stroke="#d5d9de" stroke-width="1.2"/>
+<text x="24" y="63" font-size="18" fill="#2b5797" text-anchor="start" font-weight="bold">PedidoFácil</text>
+<text x="170" y="62" font-size="14" fill="#555" text-anchor="start">Início</text>
+<text x="265" y="62" font-size="14" fill="#555" text-anchor="start">Clientes</text>
+<text x="360" y="62" font-size="14" fill="#555" text-anchor="start">Produtos</text>
+<text x="455" y="62" font-size="14" fill="#2b5797" text-anchor="start" font-weight="bold">Pedidos</text>
+<line x1="455" y1="70" x2="511" y2="70" stroke="#2b5797" stroke-width="2"/>
+<text x="760" y="62" font-size="12" fill="#666" text-anchor="start">vendedor@email.com</text>
+<text x="928.0" y="66.0" font-size="13" fill="#2b5797" text-anchor="middle">Sair</text>
+<text x="24" y="125" font-size="22" fill="#222" text-anchor="start" font-weight="bold">Pedidos</text>
+<rect x="796" y="103" width="140" height="34" rx="5" fill="#2b5797" stroke="#2b5797" stroke-width="1.2"/>
+<text x="866.0" y="125.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">+ Novo pedido</text>
+<text x="24" y="166" font-size="12" fill="#444" text-anchor="start" font-weight="bold">Status</text>
+<rect x="76" y="150" width="200" height="30" rx="4" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="88" y="170" font-size="13" fill="#333" text-anchor="start">Todos</text>
+<polygon points="258,162 268,162 263,168" fill="#666"/>
+<rect x="288" y="150" width="80" height="30" rx="5" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="328.0" y="170.0" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Filtrar</text>
+<rect x="24" y="200" width="912" height="204" rx="3" fill="#fff" stroke="#cfd5db" stroke-width="1.2"/>
+<rect x="24" y="200" width="912" height="34" rx="3" fill="#eef1f4" stroke="#cfd5db" stroke-width="1.2"/>
+<text x="34" y="222" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Nº</text>
+<text x="114" y="222" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Cliente</text>
+<text x="414" y="222" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Data</text>
+<text x="544" y="222" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Status</text>
+<text x="714" y="222" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Total</text>
+<text x="854" y="222" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Ações</text>
+<line x1="24" y1="234" x2="936" y2="234" stroke="#e1e5e9"/>
+<text x="34" y="256" font-size="12" fill="#333" text-anchor="start">5</text>
+<text x="114" y="256" font-size="12" fill="#333" text-anchor="start">Maria Oliveira</text>
+<text x="414" y="256" font-size="12" fill="#333" text-anchor="start">29/10/2026</text>
+<text x="544" y="256" font-size="12" fill="#333" text-anchor="start"></text>
+<text x="714" y="256" font-size="12" fill="#333" text-anchor="start">R$ 0,00</text>
+<text x="854" y="256" font-size="12" fill="#2b5797" text-anchor="start">Detalhes</text>
+<line x1="24" y1="268" x2="936" y2="268" stroke="#e1e5e9"/>
+<text x="34" y="290" font-size="12" fill="#333" text-anchor="start">4</text>
+<text x="114" y="290" font-size="12" fill="#333" text-anchor="start">Oficina Silva Ltda</text>
+<text x="414" y="290" font-size="12" fill="#333" text-anchor="start">28/10/2026</text>
+<text x="544" y="290" font-size="12" fill="#333" text-anchor="start"></text>
+<text x="714" y="290" font-size="12" fill="#333" text-anchor="start">R$ 1.280,00</text>
+<text x="854" y="290" font-size="12" fill="#2b5797" text-anchor="start">Detalhes</text>
+<line x1="24" y1="302" x2="936" y2="302" stroke="#e1e5e9"/>
+<text x="34" y="324" font-size="12" fill="#333" text-anchor="start">3</text>
+<text x="114" y="324" font-size="12" fill="#333" text-anchor="start">Mercado Bom Preço Ltda</text>
+<text x="414" y="324" font-size="12" fill="#333" text-anchor="start">27/10/2026</text>
+<text x="544" y="324" font-size="12" fill="#333" text-anchor="start"></text>
+<text x="714" y="324" font-size="12" fill="#333" text-anchor="start">R$ 842,40</text>
+<text x="854" y="324" font-size="12" fill="#2b5797" text-anchor="start">Detalhes</text>
+<line x1="24" y1="336" x2="936" y2="336" stroke="#e1e5e9"/>
+<text x="34" y="358" font-size="12" fill="#333" text-anchor="start">2</text>
+<text x="114" y="358" font-size="12" fill="#333" text-anchor="start">Padaria Pão Quente ME</text>
+<text x="414" y="358" font-size="12" fill="#333" text-anchor="start">25/10/2026</text>
+<text x="544" y="358" font-size="12" fill="#333" text-anchor="start"></text>
+<text x="714" y="358" font-size="12" fill="#333" text-anchor="start">R$ 315,00</text>
+<text x="854" y="358" font-size="12" fill="#2b5797" text-anchor="start">Detalhes</text>
+<line x1="24" y1="370" x2="936" y2="370" stroke="#e1e5e9"/>
+<text x="34" y="392" font-size="12" fill="#333" text-anchor="start">1</text>
+<text x="114" y="392" font-size="12" fill="#333" text-anchor="start">João da Silva</text>
+<text x="414" y="392" font-size="12" fill="#333" text-anchor="start">20/10/2026</text>
+<text x="544" y="392" font-size="12" fill="#333" text-anchor="start"></text>
+<text x="714" y="392" font-size="12" fill="#333" text-anchor="start">R$ 96,00</text>
+<text x="854" y="392" font-size="12" fill="#2b5797" text-anchor="start">Detalhes</text>
+<rect x="544" y="241" width="58" height="20" rx="10" fill="#1f6fb2" stroke="#1f6fb2" stroke-width="1.2"/>
+<text x="573.0" y="255" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">Aberto</text>
+<rect x="544" y="275" width="72" height="20" rx="10" fill="#b26a00" stroke="#b26a00" stroke-width="1.2"/>
+<text x="580.0" y="289" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">Aprovado</text>
+<rect x="544" y="309" width="58" height="20" rx="10" fill="#1f6fb2" stroke="#1f6fb2" stroke-width="1.2"/>
+<text x="573.0" y="323" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">Aberto</text>
+<rect x="544" y="343" width="72" height="20" rx="10" fill="#2e7d32" stroke="#2e7d32" stroke-width="1.2"/>
+<text x="580.0" y="357" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">Faturado</text>
+<rect x="544" y="377" width="79" height="20" rx="10" fill="#7f8c8d" stroke="#7f8c8d" stroke-width="1.2"/>
+<text x="583.5" y="391" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">Cancelado</text>
+<text x="24" y="430" font-size="12" fill="#666" text-anchor="start">Ordenado do pedido mais recente para o mais antigo. Sem resultados: "Nenhum pedido encontrado." (MSG15)</text>
+<text x="24" y="606" font-size="11" fill="#888" text-anchor="start">Protótipo de baixa fidelidade – Tela 4: Lista de pedidos com filtro por status (RF08). Cores diferentes para cada status.</text>
+</svg>

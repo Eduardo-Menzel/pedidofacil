@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="Arial, Helvetica, sans-serif">
+<rect width="960" height="620" fill="#ffffff"/>
+<rect x="0" y="0" width="960" height="34" rx="4" fill="#e6e8eb" stroke="none" stroke-width="1.2"/>
+<circle cx="18" cy="17" r="6" fill="#e06c5a"/>
+<circle cx="36" cy="17" r="6" fill="#e3b341"/>
+<circle cx="54" cy="17" r="6" fill="#5fb36b"/>
+<rect x="80" y="8" width="600" height="18" rx="9" fill="#fff" stroke="#c9ced4" stroke-width="1.2"/>
+<text x="92" y="21" font-size="11" fill="#666" text-anchor="start">pedidofacil.exemplo.com/Pedidos/Details/3</text>
+<rect x="0" y="34" width="960" height="46" rx="0" fill="#f1f3f5" stroke="#d5d9de" stroke-width="1.2"/>
+<text x="24" y="63" font-size="18" fill="#2b5797" text-anchor="start" font-weight="bold">PedidoFácil</text>
+<text x="170" y="62" font-size="14" fill="#555" text-anchor="start">Início</text>
+<text x="265" y="62" font-size="14" fill="#555" text-anchor="start">Clientes</text>
+<text x="360" y="62" font-size="14" fill="#555" text-anchor="start">Produtos</text>
+<text x="455" y="62" font-size="14" fill="#2b5797" text-anchor="start" font-weight="bold">Pedidos</text>
+<line x1="455" y1="70" x2="511" y2="70" stroke="#2b5797" stroke-width="2"/>
+<text x="760" y="62" font-size="12" fill="#666" text-anchor="start">vendedor@email.com</text>
+<text x="928.0" y="66.0" font-size="13" fill="#2b5797" text-anchor="middle">Sair</text>
+<rect x="24" y="90" width="912" height="34" rx="4" fill="#e6f4ea" stroke="#7bc08a" stroke-width="1.2"/>
+<text x="38" y="112" font-size="13" fill="#1e5e2b" text-anchor="start">Item adicionado ao pedido.</text>
+<text x="918" y="112" font-size="15" fill="#1e5e2b" text-anchor="start">×</text>
+<text x="24" y="152" font-size="22" fill="#222" text-anchor="start" font-weight="bold">Pedido nº 3</text>
+<rect x="160" y="136" width="58" height="20" rx="10" fill="#1f6fb2" stroke="#1f6fb2" stroke-width="1.2"/>
+<text x="189.0" y="150" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">Aberto</text>
+<text x="24" y="176" font-size="13" fill="#555" text-anchor="start">Cliente: Mercado Bom Preço Ltda</text>
+<text x="300" y="176" font-size="13" fill="#555" text-anchor="start">Data: 27/10/2026</text>
+<rect x="24" y="192" width="720" height="136" rx="3" fill="#fff" stroke="#cfd5db" stroke-width="1.2"/>
+<rect x="24" y="192" width="720" height="34" rx="3" fill="#eef1f4" stroke="#cfd5db" stroke-width="1.2"/>
+<text x="34" y="214" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Código</text>
+<text x="124" y="214" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Produto</text>
+<text x="394" y="214" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Qtd</text>
+<text x="464" y="214" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Preço unit.</text>
+<text x="574" y="214" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Subtotal</text>
+<text x="684" y="214" font-size="12" fill="#333" text-anchor="start" font-weight="bold"></text>
+<line x1="24" y1="226" x2="744" y2="226" stroke="#e1e5e9"/>
+<text x="34" y="248" font-size="12" fill="#333" text-anchor="start">PRD-001</text>
+<text x="124" y="248" font-size="12" fill="#333" text-anchor="start">Caneta esferográfica azul (cx 50)</text>
+<text x="394" y="248" font-size="12" fill="#333" text-anchor="start">4</text>
+<text x="464" y="248" font-size="12" fill="#333" text-anchor="start">R$ 45,00</text>
+<text x="574" y="248" font-size="12" fill="#333" text-anchor="start">R$ 180,00</text>
+<text x="684" y="248" font-size="12" fill="#c0392b" text-anchor="start">Remover</text>
+<line x1="24" y1="260" x2="744" y2="260" stroke="#e1e5e9"/>
+<text x="34" y="282" font-size="12" fill="#333" text-anchor="start">PRD-004</text>
+<text x="124" y="282" font-size="12" fill="#333" text-anchor="start">Papel A4 75g (resma)</text>
+<text x="394" y="282" font-size="12" fill="#333" text-anchor="start">20</text>
+<text x="464" y="282" font-size="12" fill="#333" text-anchor="start">R$ 32,90</text>
+<text x="574" y="282" font-size="12" fill="#333" text-anchor="start">R$ 658,00</text>
+<text x="684" y="282" font-size="12" fill="#c0392b" text-anchor="start">Remover</text>
+<line x1="24" y1="294" x2="744" y2="294" stroke="#e1e5e9"/>
+<text x="34" y="316" font-size="12" fill="#333" text-anchor="start">PRD-007</text>
+<text x="124" y="316" font-size="12" fill="#333" text-anchor="start">Grampeador de mesa</text>
+<text x="394" y="316" font-size="12" fill="#333" text-anchor="start">2</text>
+<text x="464" y="316" font-size="12" fill="#333" text-anchor="start">R$ 49,00</text>
+<text x="574" y="316" font-size="12" fill="#333" text-anchor="start">R$ 98,00</text>
+<text x="684" y="316" font-size="12" fill="#c0392b" text-anchor="start">Remover</text>
+<rect x="24" y="346" width="720" height="74" rx="6" fill="#f8f9fa" stroke="#cfd5db" stroke-width="1.2"/>
+<text x="36" y="366" font-size="13" fill="#333" text-anchor="start" font-weight="bold">Adicionar item</text>
+<rect x="36" y="376" width="330" height="32" rx="4" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="48" y="397" font-size="13" fill="#999" text-anchor="start">Selecione um produto</text>
+<polygon points="348,389 358,389 353,395" fill="#666"/>
+<rect x="378" y="376" width="80" height="32" rx="4" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="390" y="397" font-size="13" fill="#333" text-anchor="start">1</text>
+<text x="470" y="397" font-size="13" fill="#555" text-anchor="start">Subtotal: R$ 0,00</text>
+<rect x="624" y="376" width="108" height="32" rx="5" fill="#2b5797" stroke="#2b5797" stroke-width="1.2"/>
+<text x="678.0" y="397.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Adicionar</text>
+<rect x="760" y="192" width="176" height="228" rx="6" fill="#fafbfc" stroke="#cfd5db" stroke-width="1.2"/>
+<text x="772" y="216" font-size="14" fill="#333" text-anchor="start" font-weight="bold">Resumo</text>
+<text x="772" y="244" font-size="12" fill="#555" text-anchor="start">Subtotal</text>
+<text x="924" y="244" font-size="12" fill="#333" text-anchor="end">R$ 936,00</text>
+<text x="772" y="272" font-size="12" fill="#555" text-anchor="start">Desconto (%)</text>
+<rect x="772" y="280" width="70" height="28" rx="4" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="782" y="299" font-size="13" fill="#333" text-anchor="start">10</text>
+<rect x="850" y="280" width="74" height="28" rx="5" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="887.0" y="299.0" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Aplicar</text>
+<text x="772" y="334" font-size="12" fill="#555" text-anchor="start">Desconto</text>
+<text x="924" y="334" font-size="12" fill="#333" text-anchor="end">- R$ 93,60</text>
+<line x1="772" y1="348" x2="924" y2="348" stroke="#cfd5db"/>
+<text x="772" y="376" font-size="14" fill="#333" text-anchor="start" font-weight="bold">TOTAL</text>
+<text x="924" y="376" font-size="16" fill="#2b5797" text-anchor="end" font-weight="bold">R$ 842,40</text>
+<text x="772" y="402" font-size="10" fill="#888" text-anchor="start">Total = subtotal × (1 − 10%)</text>
+<rect x="24" y="446" width="130" height="38" rx="5" fill="#2e7d32" stroke="#2e7d32" stroke-width="1.2"/>
+<text x="89.0" y="470.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Aprovar</text>
+<rect x="166" y="446" width="160" height="38" rx="5" fill="#fff" stroke="#c0392b" stroke-width="1.2"/>
+<text x="246.0" y="470.0" font-size="13" fill="#c0392b" text-anchor="middle" font-weight="bold">Cancelar pedido</text>
+<rect x="338" y="446" width="100" height="38" rx="5" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="388.0" y="470.0" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Voltar</text>
+<text x="24" y="512" font-size="12" fill="#666" text-anchor="start">Os botões de ação mudam conforme o status (Aberto: Aprovar/Cancelar; Aprovado: Faturar/Cancelar; Faturado e Cancelado: nenhum).</text>
+<text x="24" y="532" font-size="12" fill="#666" text-anchor="start">Com o pedido fora do status Aberto, a área "Adicionar item", o campo de desconto e os botões Remover ficam ocultos (RN05).</text>
+<text x="24" y="606" font-size="11" fill="#888" text-anchor="start">Protótipo de baixa fidelidade – Tela 5: Detalhes do pedido com itens, desconto e total (RF04 a RF07).</text>
+</svg>

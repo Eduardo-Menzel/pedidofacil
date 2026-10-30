@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="Arial, Helvetica, sans-serif">
+<rect width="960" height="620" fill="#ffffff"/>
+<rect x="0" y="0" width="960" height="34" rx="4" fill="#e6e8eb" stroke="none" stroke-width="1.2"/>
+<circle cx="18" cy="17" r="6" fill="#e06c5a"/>
+<circle cx="36" cy="17" r="6" fill="#e3b341"/>
+<circle cx="54" cy="17" r="6" fill="#5fb36b"/>
+<rect x="80" y="8" width="600" height="18" rx="9" fill="#fff" stroke="#c9ced4" stroke-width="1.2"/>
+<text x="92" y="21" font-size="11" fill="#666" text-anchor="start">pedidofacil.exemplo.com/Identity/Account/Login</text>
+<rect x="0" y="34" width="960" height="46" rx="0" fill="#f1f3f5" stroke="#d5d9de" stroke-width="1.2"/>
+<text x="24" y="63" font-size="18" fill="#2b5797" text-anchor="start" font-weight="bold">PedidoFácil</text>
+<rect x="300" y="120" width="360" height="400" rx="8" fill="#fafbfc" stroke="#cfd5db" stroke-width="1.2"/>
+<text x="480" y="165" font-size="20" fill="#222" text-anchor="middle" font-weight="bold">Entrar no PedidoFácil</text>
+<text x="480" y="188" font-size="12" fill="#777" text-anchor="middle">Use seu e-mail e senha</text>
+<rect x="330" y="205" width="300" height="34" rx="4" fill="#fdecea" stroke="#e39b93" stroke-width="1.2"/>
+<text x="344" y="227" font-size="13" fill="#8a1f17" text-anchor="start">E-mail ou senha inválidos.</text>
+<text x="612" y="227" font-size="15" fill="#8a1f17" text-anchor="start">×</text>
+<text x="330" y="268" font-size="12" fill="#444" text-anchor="start" font-weight="bold">E-mail *</text>
+<rect x="330" y="274" width="300" height="30" rx="4" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="340" y="294" font-size="13" fill="#222" text-anchor="start">vendedor@email.com</text>
+<text x="330" y="333" font-size="12" fill="#444" text-anchor="start" font-weight="bold">Senha *</text>
+<rect x="330" y="339" width="300" height="30" rx="4" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="340" y="359" font-size="13" fill="#222" text-anchor="start">••••••••</text>
+<rect x="330" y="392" width="14" height="14" rx="2" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="352" y="404" font-size="12" fill="#333" text-anchor="start">Lembrar de mim</text>
+<rect x="330" y="420" width="300" height="38" rx="5" fill="#2b5797" stroke="#2b5797" stroke-width="1.2"/>
+<text x="480.0" y="444.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Entrar</text>
+<text x="480" y="485" font-size="13" fill="#2b5797" text-anchor="middle">Ainda não tem conta? Criar conta</text>
+<text x="24" y="606" font-size="11" fill="#888" text-anchor="start">Protótipo de baixa fidelidade – Tela 1: Login (RF01). Exemplo com a mensagem MSG10 de senha errada.</text>
+</svg>

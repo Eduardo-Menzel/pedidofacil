@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="Arial, Helvetica, sans-serif">
+<rect width="960" height="620" fill="#ffffff"/>
+<rect x="0" y="0" width="960" height="34" rx="4" fill="#e6e8eb" stroke="none" stroke-width="1.2"/>
+<circle cx="18" cy="17" r="6" fill="#e06c5a"/>
+<circle cx="36" cy="17" r="6" fill="#e3b341"/>
+<circle cx="54" cy="17" r="6" fill="#5fb36b"/>
+<rect x="80" y="8" width="600" height="18" rx="9" fill="#fff" stroke="#c9ced4" stroke-width="1.2"/>
+<text x="92" y="21" font-size="11" fill="#666" text-anchor="start">pedidofacil.exemplo.com/Clientes</text>
+<rect x="0" y="34" width="960" height="46" rx="0" fill="#f1f3f5" stroke="#d5d9de" stroke-width="1.2"/>
+<text x="24" y="63" font-size="18" fill="#2b5797" text-anchor="start" font-weight="bold">PedidoFácil</text>
+<text x="170" y="62" font-size="14" fill="#555" text-anchor="start">Início</text>
+<text x="265" y="62" font-size="14" fill="#2b5797" text-anchor="start" font-weight="bold">Clientes</text>
+<line x1="265" y1="70" x2="329" y2="70" stroke="#2b5797" stroke-width="2"/>
+<text x="360" y="62" font-size="14" fill="#555" text-anchor="start">Produtos</text>
+<text x="455" y="62" font-size="14" fill="#555" text-anchor="start">Pedidos</text>
+<text x="760" y="62" font-size="12" fill="#666" text-anchor="start">vendedor@email.com</text>
+<text x="928.0" y="66.0" font-size="13" fill="#2b5797" text-anchor="middle">Sair</text>
+<rect x="24" y="92" width="912" height="34" rx="4" fill="#e6f4ea" stroke="#7bc08a" stroke-width="1.2"/>
+<text x="38" y="114" font-size="13" fill="#1e5e2b" text-anchor="start">Cliente cadastrado com sucesso.</text>
+<text x="918" y="114" font-size="15" fill="#1e5e2b" text-anchor="start">×</text>
+<text x="24" y="158" font-size="22" fill="#222" text-anchor="start" font-weight="bold">Clientes</text>
+<rect x="796" y="136" width="140" height="34" rx="5" fill="#2b5797" stroke="#2b5797" stroke-width="1.2"/>
+<text x="866.0" y="158.0" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">+ Novo cliente</text>
+<rect x="24" y="180" width="330" height="32" rx="4" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="36" y="201" font-size="13" fill="#999" text-anchor="start">Buscar por nome...</text>
+<rect x="364" y="180" width="80" height="32" rx="5" fill="#fff" stroke="#9aa3ad" stroke-width="1.2"/>
+<text x="404.0" y="201.0" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Buscar</text>
+<rect x="24" y="228" width="912" height="204" rx="3" fill="#fff" stroke="#cfd5db" stroke-width="1.2"/>
+<rect x="24" y="228" width="912" height="34" rx="3" fill="#eef1f4" stroke="#cfd5db" stroke-width="1.2"/>
+<text x="34" y="250" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Nome</text>
+<text x="274" y="250" font-size="12" fill="#333" text-anchor="start" font-weight="bold">CNPJ/CPF</text>
+<text x="454" y="250" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Cidade/UF</text>
+<text x="604" y="250" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Telefone</text>
+<text x="744" y="250" font-size="12" fill="#333" text-anchor="start" font-weight="bold">Ações</text>
+<line x1="24" y1="262" x2="936" y2="262" stroke="#e1e5e9"/>
+<text x="34" y="284" font-size="12" fill="#333" text-anchor="start">Mercado Bom Preço Ltda</text>
+<text x="274" y="284" font-size="12" fill="#333" text-anchor="start">12.345.678/0001-90</text>
+<text x="454" y="284" font-size="12" fill="#333" text-anchor="start">Chapecó/SC</text>
+<text x="604" y="284" font-size="12" fill="#333" text-anchor="start">(49) 99999-0001</text>
+<text x="744" y="284" font-size="12" fill="#2b5797" text-anchor="start">Editar  |  Detalhes  |  Excluir</text>
+<line x1="24" y1="296" x2="936" y2="296" stroke="#e1e5e9"/>
+<text x="34" y="318" font-size="12" fill="#333" text-anchor="start">Padaria Pão Quente ME</text>
+<text x="274" y="318" font-size="12" fill="#333" text-anchor="start">98.765.432/0001-10</text>
+<text x="454" y="318" font-size="12" fill="#333" text-anchor="start">Xaxim/SC</text>
+<text x="604" y="318" font-size="12" fill="#333" text-anchor="start">(49) 99999-0002</text>
+<text x="744" y="318" font-size="12" fill="#2b5797" text-anchor="start">Editar  |  Detalhes  |  Excluir</text>
+<line x1="24" y1="330" x2="936" y2="330" stroke="#e1e5e9"/>
+<text x="34" y="352" font-size="12" fill="#333" text-anchor="start">Oficina Silva Ltda</text>
+<text x="274" y="352" font-size="12" fill="#333" text-anchor="start">11.222.333/0001-44</text>
+<text x="454" y="352" font-size="12" fill="#333" text-anchor="start">Concórdia/SC</text>
+<text x="604" y="352" font-size="12" fill="#333" text-anchor="start">(49) 99999-0003</text>
+<text x="744" y="352" font-size="12" fill="#2b5797" text-anchor="start">Editar  |  Detalhes  |  Excluir</text>
+<line x1="24" y1="364" x2="936" y2="364" stroke="#e1e5e9"/>
+<text x="34" y="386" font-size="12" fill="#333" text-anchor="start">João da Silva</text>
+<text x="274" y="386" font-size="12" fill="#333" text-anchor="start">123.456.789-09</text>
+<text x="454" y="386" font-size="12" fill="#333" text-anchor="start">Chapecó/SC</text>
+<text x="604" y="386" font-size="12" fill="#333" text-anchor="start">(49) 99999-0004</text>
+<text x="744" y="386" font-size="12" fill="#2b5797" text-anchor="start">Editar  |  Detalhes  |  Excluir</text>
+<line x1="24" y1="398" x2="936" y2="398" stroke="#e1e5e9"/>
+<text x="34" y="420" font-size="12" fill="#333" text-anchor="start">Maria Oliveira</text>
+<text x="274" y="420" font-size="12" fill="#333" text-anchor="start">987.654.321-00</text>
+<text x="454" y="420" font-size="12" fill="#333" text-anchor="start">Pinhalzinho/SC</text>
+<text x="604" y="420" font-size="12" fill="#333" text-anchor="start">(49) 99999-0005</text>
+<text x="744" y="420" font-size="12" fill="#2b5797" text-anchor="start">Editar  |  Detalhes  |  Excluir</text>
+<text x="24" y="465" font-size="12" fill="#777" text-anchor="start">Mostrando 5 clientes</text>
+<text x="24" y="606" font-size="11" fill="#888" text-anchor="start">Protótipo de baixa fidelidade – Tela 2: Lista de clientes com busca (RF02). Alerta verde MSG01 some após 4 segundos. Dados fictícios.</text>
+</svg>
