@@ -50,4 +50,13 @@ Para usar SQL Server no lugar do SQLite, basta trocar o pacote `Microsoft.Entity
 
 ## Publicação online
 
-_Será preenchido quando o sistema for publicado (endereço, hospedagem e passos)._
+**Endereço:** http://pedidofacil.runasp.net
+
+**Hospedagem:** MonsterASP.NET, plano gratuito (servidor Windows/IIS, datacenter na Europa, .NET 10).
+
+**Como publicar uma nova versão:**
+1. No painel da hospedagem (admin.monsterasp.net): Websites → site → Deploy → Visual Studio access → WebDeploy **Enabled** → Download publish profile.
+2. No Visual Studio: botão direito em **PedidoFacil.Web** → Publish → Import profile → escolher o arquivo `.publishSettings` → **Publish**.
+3. O banco SQLite é criado no servidor na primeira execução, com os dados de exemplo. Publicar de novo não apaga o banco do servidor, desde que a opção "Remove additional files at destination" (em Show all settings) fique desmarcada.
+
+> O arquivo `.publishSettings` contém a senha de publicação e **não** deve ser enviado ao GitHub.

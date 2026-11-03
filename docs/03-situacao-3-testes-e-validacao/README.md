@@ -1,9 +1,12 @@
 # Situação-Problema 3 – Testes, Validação e Melhorias
 
-Conteúdo desta pasta (em construção):
+| Documento | Conteúdo |
+|---|---|
+| [plano-de-testes.md](plano-de-testes.md) | Testes automatizados, casos de teste funcionais e matriz requisito × teste (Modelo V) |
+| [relatorio-de-testes.md](relatorio-de-testes.md) | Resultados da verificação e da validação, defeitos e pendências |
+| [changelog-melhorias.md](changelog-melhorias.md) | Correções e melhorias adotadas, com a origem de cada uma |
+| [formulario-avaliacao.md](formulario-avaliacao.md) | Modelo do laudo usado pelos avaliadores e mensagem-convite |
+| [evidencias/](evidencias/) | Prints dos testes |
 
-- `plano-de-testes.md` – testes automatizados e manuais, com a matriz requisito × teste
-- `relatorio-de-testes.md` – resultados da verificação e da validação
-- `formulario-avaliacao.md` – modelo do laudo usado pelos avaliadores
+Em construção:
 - `avaliacoes-pares.pdf` – as 5 avaliações recebidas
-- `changelog-melhorias.md` – correções e melhorias adotadas, e pendências conhecidas
