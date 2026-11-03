@@ -1,0 +1,171 @@
+@model Pedido
+@{
+    ViewData["Title"] = $"Pedido nº {Model.Id}";
+    var produtos = ViewData["Produtos"] as List<Produto> ?? new List<Produto>();
+    var podeEditar = Model.PodeEditar();
+}
+
+<div class="d-flex flex-wrap align-items-center gap-2">
+    <h1 class="h3 mb-0">Pedido nº @Model.Id</h1>
+    <span class="badge fs-6 @Model.Status.CorEtiqueta()">@Model.Status</span>
+</div>
+<p class="text-muted mt-1">
+    Cliente: <a asp-controller="Clientes" asp-action="Details" asp-route-id="@Model.ClienteId">@(Model.Cliente?.Nome)</a>
+    · Data: @Model.DataPedido.ToString("dd/MM/yyyy")
+</p>
+@if (!string.IsNullOrWhiteSpace(Model.Observacao))
+{
+    <p class="small"><strong>Observação:</strong> @Model.Observacao</p>
+}
+
+<div class="row g-4">
+    <!-- Itens do pedido -->
+    <div class="col-lg-8">
+        @if (!Model.Itens.Any())
+        {
+            <div class="alert alert-info"><i class="bi bi-info-circle"></i> Este pedido ainda não tem itens. Adicione pelo menos um para poder aprovar.</div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table align-middle bg-white border">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="d-none d-sm-table-cell">Código</th>
+                            <th>Produto</th>
+                            <th class="text-end">Qtd</th>
+                            <th class="text-end d-none d-md-table-cell">Preço unit.</th>
+                            <th class="text-end">Subtotal</th>
+                            @if (podeEditar)
+                            {
+                                <th></th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Itens.OrderBy(i => i.Id))
+                        {
+                            <tr>
+                                <td class="d-none d-sm-table-cell text-nowrap">@(item.Produto?.Codigo)</td>
+                                <td>@(item.Produto?.Descricao)</td>
+                                <td class="text-end">@item.Quantidade</td>
+                                <td class="text-end d-none d-md-table-cell text-nowrap">@item.PrecoUnitario.ToString("C")</td>
+                                <td class="text-end text-nowrap">@item.CalcularSubtotal().ToString("C")</td>
+                                @if (podeEditar)
+                                {
+                                    <td class="text-end">
+                                        <form asp-action="RemoverItem" asp-route-id="@Model.Id" method="post" data-confirmar="Remover este item do pedido?">
+                                            <input type="hidden" name="itemId" value="@item.Id" />
+                                            <button type="submit" class="btn btn-sm btn-outline-danger" title="Remover"><i class="bi bi-x-lg"></i><span class="d-none d-md-inline"> Remover</span></button>
+                                        </form>
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        @if (podeEditar)
+        {
+            <div class="card bg-body-tertiary">
+                <div class="card-body">
+                    <h2 class="h6">Adicionar item</h2>
+                    @if (!produtos.Any())
+                    {
+                        <p class="mb-0 text-muted">Nenhum produto ativo. <a asp-controller="Produtos" asp-action="Create">Cadastre um produto</a>.</p>
+                    }
+                    else
+                    {
+                        <form asp-action="AdicionarItem" asp-route-id="@Model.Id" method="post" class="row g-2 align-items-end" id="form-adicionar-item">
+                            <div class="col-md-6">
+                                <label for="produtoId" class="form-label small">Produto</label>
+                                <select id="produtoId" name="produtoId" class="form-select" required>
+                                    <option value="">Selecione um produto</option>
+                                    @foreach (var p in produtos)
+                                    {
+                                        <option value="@p.Id" data-preco="@p.PrecoUnitario.ToString(CultureInfo.InvariantCulture)">@p.CodigoDescricao – @p.PrecoUnitario.ToString("C")</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <label for="quantidade" class="form-label small">Quantidade</label>
+                                <input id="quantidade" name="quantidade" type="number" min="1" step="1" value="1" class="form-control" required />
+                            </div>
+                            <div class="col-8 col-md-4 d-flex align-items-end justify-content-between gap-2">
+                                <span class="small text-muted pb-2">Subtotal: <strong id="subtotal-previa">R$ 0,00</strong></span>
+                                <button type="submit" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Adicionar</button>
+                            </div>
+                        </form>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Resumo e desconto -->
+    <div class="col-lg-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="h6">Resumo</h2>
+                <div class="d-flex justify-content-between"><span class="text-muted">Subtotal</span><span>@Model.CalcularSubtotal().ToString("C")</span></div>
+
+                @if (podeEditar)
+                {
+                    <form asp-action="AtualizarDesconto" asp-route-id="@Model.Id" method="post" class="mt-2">
+                        <label for="desconto" class="form-label small text-muted mb-1">Desconto (%) – de 0 a 30</label>
+                        <div class="input-group input-group-sm">
+                            <input id="desconto" name="desconto" type="text" inputmode="decimal" class="form-control"
+                                   value="@Model.DescontoPercentual.ToString("0.##")" />
+                            <button type="submit" class="btn btn-outline-secondary">Aplicar</button>
+                        </div>
+                    </form>
+                }
+                else
+                {
+                    <div class="d-flex justify-content-between mt-1"><span class="text-muted">Desconto (%)</span><span>@Model.DescontoPercentual.ToString("0.##")%</span></div>
+                }
+
+                <div class="d-flex justify-content-between mt-2"><span class="text-muted">Desconto (R$)</span><span>- @Model.CalcularValorDesconto().ToString("C")</span></div>
+                <hr />
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <span class="fw-bold">TOTAL</span>
+                    <span class="fs-4 fw-bold text-primary" id="total-pedido">@Model.CalcularTotal().ToString("C")</span>
+                </div>
+                <div class="small text-muted">Total = subtotal × (1 − desconto ÷ 100)</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ações de status: só aparecem as permitidas (RN06) -->
+<div class="mt-4 d-flex flex-wrap gap-2">
+    @if (Model.PodeMudarPara(StatusPedido.Aprovado))
+    {
+        <form asp-action="AlterarStatus" asp-route-id="@Model.Id" method="post">
+            <input type="hidden" name="novoStatus" value="@StatusPedido.Aprovado" />
+            <button type="submit" class="btn btn-success"><i class="bi bi-check2-circle"></i> Aprovar</button>
+        </form>
+    }
+    @if (Model.PodeMudarPara(StatusPedido.Faturado))
+    {
+        <form asp-action="AlterarStatus" asp-route-id="@Model.Id" method="post">
+            <input type="hidden" name="novoStatus" value="@StatusPedido.Faturado" />
+            <button type="submit" class="btn btn-success"><i class="bi bi-receipt"></i> Faturar</button>
+        </form>
+    }
+    @if (Model.PodeMudarPara(StatusPedido.Cancelado))
+    {
+        <form asp-action="AlterarStatus" asp-route-id="@Model.Id" method="post" data-confirmar="@Mensagens.ConfirmarCancelamento">
+            <input type="hidden" name="novoStatus" value="@StatusPedido.Cancelado" />
+            <button type="submit" class="btn btn-outline-danger"><i class="bi bi-x-circle"></i> Cancelar pedido</button>
+        </form>
+    }
+    <a asp-action="Index" class="btn btn-outline-secondary">Voltar</a>
+</div>
+
+@if (!podeEditar)
+{
+    <p class="small text-muted mt-3"><i class="bi bi-lock"></i> @Mensagens.PedidoNaoEditavel</p>
+}

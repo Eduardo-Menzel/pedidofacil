@@ -5,7 +5,7 @@
 <circle cx="36" cy="17" r="6" fill="#e3b341"/>
 <circle cx="54" cy="17" r="6" fill="#5fb36b"/>
 <rect x="80" y="8" width="600" height="18" rx="9" fill="#fff" stroke="#c9ced4" stroke-width="1.2"/>
-<text x="92" y="21" font-size="11" fill="#666" text-anchor="start">pedidofacil.exemplo.com/Identity/Account/Login</text>
+<text x="92" y="21" font-size="11" fill="#666" text-anchor="start">pedidofacil.exemplo.com/Conta/Entrar</text>
 <rect x="0" y="34" width="960" height="46" rx="0" fill="#f1f3f5" stroke="#d5d9de" stroke-width="1.2"/>
 <text x="24" y="63" font-size="18" fill="#2b5797" text-anchor="start" font-weight="bold">PedidoFácil</text>
 <rect x="300" y="120" width="360" height="400" rx="8" fill="#fafbfc" stroke="#cfd5db" stroke-width="1.2"/>

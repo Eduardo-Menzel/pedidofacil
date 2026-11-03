@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PedidoFacil.Web/PedidoFacil.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PedidoFacil.Tests/PedidoFacil.Tests.csproj" />
+  </Folder>
+</Solution>

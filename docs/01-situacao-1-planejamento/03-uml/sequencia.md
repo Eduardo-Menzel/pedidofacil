@@ -14,21 +14,23 @@ sequenceDiagram
     participant P as Pedido (Model)
 
     V->>T: Escolhe o produto, digita a quantidade e clica em "Adicionar"
-    T->>C: POST /Pedidos/AdicionarItem (pedidoId, produtoId, quantidade)
+    T->>C: POST /Pedidos/AdicionarItem/{id} (produtoId, quantidade)
     C->>DB: Busca o pedido (com itens) e o produto
     DB-->>C: Pedido e Produto
 
     alt Pedido ou produto não encontrado
         C-->>T: NotFound (página 404 – MSG09)
     else Pedido encontrado
-        C->>P: PodeEditar()
-        P-->>C: verdadeiro ou falso
+        C->>P: AdicionarItem(produto, quantidade)
         alt Pedido não está Aberto (RN05)
+            P-->>C: RegraNegocioException MSG06
             C-->>T: Redireciona para Detalhes com erro MSG06
         else Quantidade menor que 1 (RN02)
+            P-->>C: RegraNegocioException MSG13
             C-->>T: Redireciona para Detalhes com erro MSG13
         else Dados válidos
-            C->>P: Itens.Add(novo ItemPedido com o preço atual do produto) (RN09)
+            P->>P: Cria ItemPedido com o preço atual do produto (RN09)
+            P-->>C: Item adicionado
             C->>DB: SaveChanges()
             DB-->>C: Item gravado
             C-->>T: Redireciona para Detalhes com sucesso MSG19
@@ -52,7 +54,7 @@ sequenceDiagram
     participant P as Pedido (Model)
 
     V->>T: Clica em "Aprovar"
-    T->>C: POST /Pedidos/AlterarStatus (id, Aprovado)
+    T->>C: POST /Pedidos/AlterarStatus/{id} (novoStatus = Aprovado)
     C->>DB: Busca o pedido com os itens
     DB-->>C: Pedido
     C->>P: AlterarStatus(Aprovado)

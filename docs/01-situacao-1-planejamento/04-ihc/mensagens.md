@@ -40,3 +40,16 @@ Todas as mensagens que o sistema mostra ao usuário. Seguem os princípios de IH
 | MSG23 | Sucesso | Produto cadastrado com sucesso. | Ao salvar um novo produto | RF03 |
 | MSG24 | Informação | Nenhum cliente encontrado. | Busca de clientes sem resultado | RF02 |
 | MSG25 | Erro | Informe um e-mail válido. | E-mail em formato inválido | RF02 |
+| MSG26 | Erro | Este produto já foi usado em pedidos e não pode ser excluído. Marque-o como inativo. | Excluir produto que já foi vendido | Integridade referencial |
+| MSG27 | Erro | Informe um CPF (11 dígitos) ou CNPJ (14 dígitos) válido. | CNPJ/CPF em formato inválido | RN01 |
+| MSG28 | Erro | Selecione um produto. | Adicionar item sem escolher o produto | RF05 |
+| MSG29 | Erro | Este produto está inativo e não pode ser adicionado ao pedido. | Adicionar produto inativo | RF03, RF05 |
+| MSG30 | Sucesso | Conta criada com sucesso. Bem-vindo ao PedidoFácil! | Após criar a conta | RF01 |
+| MSG31 | Erro | O campo {nome do campo} deve ter entre {mínimo} e {máximo} caracteres. | Texto curto ou longo demais | RNF05 |
+| MSG32 | Sucesso | Item removido do pedido. | Após remover item | RF05 |
+| MSG33 | Sucesso | Desconto atualizado. | Após aplicar desconto | RF06 |
+| MSG34 | Erro | As senhas não conferem. | Criar conta com confirmação de senha diferente | RF01 |
+| MSG35 | Informação | Nenhum produto cadastrado. | Lista de produtos vazia | RF03 |
+| MSG36 | Erro | Selecione um cliente. | Criar pedido sem escolher o cliente | RF04 |
+
+Todas as mensagens estão centralizadas no código em `src/PedidoFacil.Web/Models/Mensagens.cs`, com o mesmo código MSGxx em comentário, o que garante que o texto da tela é o mesmo da documentação.

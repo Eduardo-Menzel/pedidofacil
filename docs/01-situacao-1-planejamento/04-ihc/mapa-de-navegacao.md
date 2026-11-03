@@ -40,8 +40,8 @@ flowchart TD
 
 | Tela | Endereço (rota MVC) | Controller / Ação |
 |---|---|---|
-| Login | /Identity/Account/Login | ASP.NET Core Identity |
-| Criar conta | /Identity/Account/Register | ASP.NET Core Identity |
+| Login | /Conta/Entrar | ContaController.Entrar |
+| Criar conta | /Conta/Registrar | ContaController.Registrar |
 | Início | / | HomeController.Index |
 | Clientes | /Clientes | ClientesController.Index |
 | Novo / editar cliente | /Clientes/Create · /Clientes/Edit/{id} | ClientesController.Create · Edit |
@@ -49,4 +49,4 @@ flowchart TD
 | Pedidos | /Pedidos?status={status} | PedidosController.Index |
 | Novo pedido | /Pedidos/Create | PedidosController.Create |
 | Detalhes do pedido | /Pedidos/Details/{id} | PedidosController.Details |
-| Erro / página não encontrada | /Home/Error · /Home/StatusCode/404 | HomeController |
+| Erro / página não encontrada | /Home/Error · /Home/StatusCode/404 | HomeController.Error · PaginaDeErro |

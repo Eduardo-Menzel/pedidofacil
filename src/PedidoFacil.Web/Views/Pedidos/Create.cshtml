@@ -1,0 +1,45 @@
+@model Pedido
+@{
+    ViewData["Title"] = "Novo pedido";
+}
+<h1 class="h3">Novo pedido</h1>
+<p class="text-muted">O pedido é criado com status <strong>Aberto</strong> e a data de hoje. Depois de salvar, você adiciona os itens.</p>
+
+<form asp-action="Create" method="post" class="mt-3">
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger py-2" role="alert"></div>
+
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label asp-for="ClienteId" class="form-label"></label> *
+            <select asp-for="ClienteId" class="form-select" asp-items="@(ViewData["Clientes"] as SelectList)">
+                <option value="">Selecione o cliente</option>
+            </select>
+            <span asp-validation-for="ClienteId" class="text-danger small"></span>
+            <div class="form-text">Cliente não está na lista? <a asp-controller="Clientes" asp-action="Create">Cadastre um novo cliente</a>.</div>
+        </div>
+        <div class="col-md-3">
+            <label asp-for="DescontoPercentual" class="form-label"></label>
+            <div class="input-group">
+                <input asp-for="DescontoPercentual" type="text" class="form-control" inputmode="decimal"
+                       value="@Model.DescontoPercentual.ToString("0.##")" />
+                <span class="input-group-text">%</span>
+            </div>
+            <span asp-validation-for="DescontoPercentual" class="text-danger small"></span>
+            <div class="form-text">De 0% a 30%.</div>
+        </div>
+        <div class="col-12">
+            <label asp-for="Observacao" class="form-label"></label>
+            <textarea asp-for="Observacao" class="form-control" rows="2" maxlength="500"></textarea>
+            <span asp-validation-for="Observacao" class="text-danger small"></span>
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex gap-2">
+        <button type="submit" class="btn btn-primary"><i class="bi bi-check-lg"></i> Salvar e adicionar itens</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Voltar</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

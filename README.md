@@ -28,11 +28,26 @@ _Link será publicado na Situação 3._
 
 ## Como rodar localmente
 
-_Instruções serão publicadas na Situação 2._
+Pré-requisito: [.NET 10 SDK](https://dotnet.microsoft.com/download) (ou Visual Studio 2026 com a carga "ASP.NET e desenvolvimento Web").
+
+**Visual Studio:** abra `PedidoFacil.slnx` e clique no botão ▶ **PedidoFacil**.
+
+**Terminal:**
+```
+git clone https://github.com/Eduardo-Menzel/pedidofacil.git
+cd pedidofacil/src/PedidoFacil.Web
+dotnet run
+```
+Acesse `http://localhost:5080`, clique em **Criar conta** e use o sistema. O banco SQLite (`pedidofacil.db`) é criado sozinho na primeira execução, com dados de exemplo fictícios.
 
 ## Como rodar os testes
 
-_Instruções serão publicadas na Situação 2._
+**Visual Studio:** menu **Teste → Gerenciador de Testes → Executar Todos**.
+**Terminal**, na pasta do repositório:
+```
+dotnet test
+```
+São testes unitários (regras de negócio), de integração com o banco SQLite e de integração das telas (requisições HTTP).
 
 ## Documentação
 
@@ -55,7 +70,11 @@ _Instruções serão publicadas na Situação 2._
 | Dicionário de dados | [dicionario-de-dados.md](docs/01-situacao-1-planejamento/05-dados/dicionario-de-dados.md) |
 
 ### Situação-Problema 2 – Desenvolvimento
-[docs/02-situacao-2-desenvolvimento](docs/02-situacao-2-desenvolvimento/) – arquitetura MVC, ambiente e manual de uso.
+| Documento | Arquivo |
+|---|---|
+| Arquitetura MVC e estrutura do código | [arquitetura-mvc.md](docs/02-situacao-2-desenvolvimento/arquitetura-mvc.md) |
+| Ambiente, execução e testes | [ambiente-e-execucao.md](docs/02-situacao-2-desenvolvimento/ambiente-e-execucao.md) |
+| Manual de uso | [manual-de-uso.md](docs/02-situacao-2-desenvolvimento/manual-de-uso.md) |
 
 ### Situação-Problema 3 – Testes e validação
 [docs/03-situacao-3-testes-e-validacao](docs/03-situacao-3-testes-e-validacao/) – plano e relatório de testes, formulário de avaliação, avaliações dos pares e melhorias.

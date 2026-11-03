@@ -1,0 +1,64 @@
+@model InicioViewModel
+@{
+    ViewData["Title"] = "Início";
+}
+
+@if (Model is null)
+{
+    <div class="py-5 text-center">
+        <i class="bi bi-cart-check display-3 text-primary"></i>
+        <h1 class="display-5 fw-bold mt-2">PedidoFácil</h1>
+        <p class="lead text-muted col-lg-7 mx-auto">
+            Controle de pedidos de venda para pequenas empresas e representantes comerciais:
+            cadastre clientes e produtos, registre pedidos com desconto e acompanhe o status de cada venda.
+        </p>
+        <div class="d-flex gap-2 justify-content-center">
+            <a asp-controller="Conta" asp-action="Entrar" class="btn btn-primary btn-lg">Entrar</a>
+            <a asp-controller="Conta" asp-action="Registrar" class="btn btn-outline-primary btn-lg">Criar conta</a>
+        </div>
+    </div>
+}
+else
+{
+    <h1 class="h3 mb-4">Início</h1>
+    <div class="row g-3">
+        <div class="col-6 col-lg-3">
+            <a asp-controller="Clientes" asp-action="Index" class="card cartao-resumo text-decoration-none h-100">
+                <div class="card-body">
+                    <div class="text-muted small"><i class="bi bi-people"></i> Clientes</div>
+                    <div class="fs-2 fw-bold">@Model.TotalClientes</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3">
+            <a asp-controller="Produtos" asp-action="Index" class="card cartao-resumo text-decoration-none h-100">
+                <div class="card-body">
+                    <div class="text-muted small"><i class="bi bi-box-seam"></i> Produtos ativos</div>
+                    <div class="fs-2 fw-bold">@Model.TotalProdutosAtivos</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3">
+            <a asp-controller="Pedidos" asp-action="Index" asp-route-status="Aberto" class="card cartao-resumo text-decoration-none h-100">
+                <div class="card-body">
+                    <div class="text-muted small"><i class="bi bi-hourglass-split"></i> Pedidos abertos</div>
+                    <div class="fs-2 fw-bold text-primary">@Model.PedidosAbertos</div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-lg-3">
+            <a asp-controller="Pedidos" asp-action="Index" asp-route-status="Aprovado" class="card cartao-resumo text-decoration-none h-100">
+                <div class="card-body">
+                    <div class="text-muted small"><i class="bi bi-check2-square"></i> Pedidos aprovados</div>
+                    <div class="fs-2 fw-bold text-warning">@Model.PedidosAprovados</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex flex-wrap gap-2">
+        <a asp-controller="Pedidos" asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Novo pedido</a>
+        <a asp-controller="Clientes" asp-action="Create" class="btn btn-outline-secondary"><i class="bi bi-person-plus"></i> Novo cliente</a>
+        <a asp-controller="Produtos" asp-action="Create" class="btn btn-outline-secondary"><i class="bi bi-box"></i> Novo produto</a>
+    </div>
+}

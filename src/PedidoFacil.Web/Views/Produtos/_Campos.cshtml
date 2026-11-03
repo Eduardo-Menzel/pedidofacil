@@ -1,0 +1,31 @@
+@model Produto
+<p class="text-muted small">Campos com * são obrigatórios.</p>
+<div asp-validation-summary="ModelOnly" class="alert alert-danger py-2" role="alert"></div>
+
+<div class="row g-3">
+    <div class="col-md-3">
+        <label asp-for="Codigo" class="form-label"></label> *
+        <input asp-for="Codigo" class="form-control text-uppercase" maxlength="30" placeholder="Ex.: PRD-011" autofocus />
+        <span asp-validation-for="Codigo" class="text-danger small"></span>
+    </div>
+    <div class="col-md-6">
+        <label asp-for="Descricao" class="form-label"></label> *
+        <input asp-for="Descricao" class="form-control" maxlength="150" />
+        <span asp-validation-for="Descricao" class="text-danger small"></span>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="PrecoUnitario" class="form-label"></label> *
+        <div class="input-group">
+            <span class="input-group-text">R$</span>
+            <input asp-for="PrecoUnitario" type="text" class="form-control" inputmode="decimal" placeholder="0,00"
+                   value="@(Model.PrecoUnitario > 0 ? Model.PrecoUnitario.ToString("0.00") : "")" />
+        </div>
+        <span asp-validation-for="PrecoUnitario" class="text-danger small"></span>
+    </div>
+    <div class="col-12">
+        <div class="form-check form-switch">
+            <input asp-for="Ativo" class="form-check-input" role="switch" />
+            <label asp-for="Ativo" class="form-check-label">Produto ativo (aparece para adicionar em pedidos)</label>
+        </div>
+    </div>
+</div>

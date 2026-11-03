@@ -36,13 +36,13 @@ Este documento reúne os requisitos funcionais (RF), os requisitos não funciona
 |---|---|---|
 | RN01 | O CNPJ/CPF do cliente é obrigatório e não pode se repetir | Cliente (validação + índice único no banco) |
 | RN02 | O preço do produto deve ser maior que zero e a quantidade do item deve ser no mínimo 1 | Produto e ItemPedido |
-| RN03 | O desconto do pedido deve estar entre 0% e 30% | Pedido |
+| RN03 | O desconto do pedido deve estar entre 0% e 30% | Pedido.DefinirDesconto() + validação do formulário |
 | RN04 | Total do pedido = soma de (quantidade × preço unitário) de cada item × (1 − desconto ÷ 100) | Pedido.CalcularTotal() |
 | RN05 | Só pedidos com status **Aberto** podem ter itens ou desconto alterados | Pedido.PodeEditar() |
 | RN06 | Mudanças de status permitidas: Aberto → Aprovado → Faturado; Aberto → Cancelado; Aprovado → Cancelado | Pedido.AlterarStatus() |
 | RN07 | Um pedido só pode ser aprovado se tiver pelo menos 1 item | Pedido.AlterarStatus() |
 | RN08 | Um cliente que tem pedidos não pode ser excluído | Controller de Clientes + chave estrangeira com restrição |
-| RN09 | O preço unitário do item é copiado do produto no momento em que o item é adicionado (preço histórico) | PedidosController.AdicionarItem |
+| RN09 | O preço unitário do item é copiado do produto no momento em que o item é adicionado (preço histórico) | Pedido.AdicionarItem() |
 | RN10 | Todo pedido novo nasce com status **Aberto**, desconto 0% e a data do dia | Pedido (valores padrão) |
 
 ---
@@ -53,7 +53,7 @@ Formato: **Como** [usuário], **quero** [ação], **para** [benefício].
 Critérios de aceitação no formato **Dado / Quando / Então**.
 
 ### HU01 – Acessar o sistema
-**Como** vendedor, **quero** criar minha conta e entrar com e-mail e senha, **para** que só eu acesse os meus dados.
+**Como** vendedor, **quero** criar minha conta e entrar com e-mail e senha, **para** que somente pessoas cadastradas acessem o sistema.
 
 Critérios de aceitação:
 - **Dado** que não tenho conta, **quando** eu me cadastrar com e-mail e senha válidos, **então** a conta é criada e eu entro no sistema.

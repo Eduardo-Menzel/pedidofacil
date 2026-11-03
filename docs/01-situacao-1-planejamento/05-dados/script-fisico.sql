@@ -5,10 +5,11 @@
 --  Aluno: Eduardo Menzel                                   Versão 1.0 – 29/10/2026
 -- -----------------------------------------------------------------------------
 --  Observações
---  * Este script é o projeto físico das tabelas de NEGÓCIO. Na Situação 2 ele
---    será substituído pelo script gerado automaticamente pelo Entity Framework
---    Core (dotnet ef migrations script), que também cria as tabelas AspNet*
---    do ASP.NET Core Identity (usuários, senhas com hash, perfis).
+--  * Este script é o projeto físico das tabelas de NEGÓCIO. No sistema, o banco
+--    é criado automaticamente pelo Entity Framework Core ao iniciar
+--    (Database.EnsureCreated), a partir do mapeamento em Data/ApplicationDbContext.cs,
+--    com as mesmas tabelas, chaves, índices e regras CHECK deste script, além das
+--    tabelas AspNet* do ASP.NET Core Identity (usuários e senhas com hash).
 --  * Valores monetários e percentuais são gravados como TEXT, que é como o
 --    Entity Framework Core guarda o tipo decimal no SQLite para não perder
 --    precisão. Por isso as regras CHECK convertem o valor com CAST.

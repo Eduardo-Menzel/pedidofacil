@@ -1,0 +1,61 @@
+@model IEnumerable<Cliente>
+@{
+    ViewData["Title"] = "Clientes";
+    var busca = ViewData["Busca"] as string;
+}
+
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+    <h1 class="h3 mb-0">Clientes</h1>
+    <a asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Novo cliente</a>
+</div>
+
+<form asp-action="Index" method="get" class="row g-2 mb-3" role="search">
+    <div class="col-sm-7 col-md-5">
+        <input type="search" name="busca" value="@busca" class="form-control" placeholder="Buscar por nome..." aria-label="Buscar por nome" />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-outline-secondary"><i class="bi bi-search"></i> Buscar</button>
+        @if (!string.IsNullOrWhiteSpace(busca))
+        {
+            <a asp-action="Index" class="btn btn-link">Limpar busca</a>
+        }
+    </div>
+</form>
+
+@if (!Model.Any())
+{
+    <p class="text-muted fst-italic">@Mensagens.NenhumCliente</p>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-hover align-middle bg-white border">
+            <thead class="table-light">
+                <tr>
+                    <th>Nome</th>
+                    <th>CNPJ/CPF</th>
+                    <th class="d-none d-md-table-cell">Cidade/UF</th>
+                    <th class="d-none d-lg-table-cell">Telefone</th>
+                    <th class="text-end">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cliente in Model)
+                {
+                    <tr>
+                        <td>@cliente.Nome</td>
+                        <td class="text-nowrap">@cliente.CnpjCpf</td>
+                        <td class="d-none d-md-table-cell">@cliente.CidadeUf</td>
+                        <td class="d-none d-lg-table-cell text-nowrap">@cliente.Telefone</td>
+                        <td class="text-end text-nowrap">
+                            <a asp-action="Edit" asp-route-id="@cliente.Id" class="btn btn-sm btn-outline-primary" title="Editar"><i class="bi bi-pencil"></i><span class="d-none d-xl-inline"> Editar</span></a>
+                            <a asp-action="Details" asp-route-id="@cliente.Id" class="btn btn-sm btn-outline-secondary" title="Detalhes"><i class="bi bi-eye"></i><span class="d-none d-xl-inline"> Detalhes</span></a>
+                            <a asp-action="Delete" asp-route-id="@cliente.Id" class="btn btn-sm btn-outline-danger" title="Excluir"><i class="bi bi-trash"></i><span class="d-none d-xl-inline"> Excluir</span></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <p class="text-muted small">Mostrando @Model.Count() cliente(s)</p>
+}

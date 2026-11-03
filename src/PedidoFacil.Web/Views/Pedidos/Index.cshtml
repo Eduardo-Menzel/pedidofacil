@@ -1,0 +1,66 @@
+@model IEnumerable<Pedido>
+@{
+    ViewData["Title"] = "Pedidos";
+    var statusSelecionado = ViewData["StatusSelecionado"] as StatusPedido?;
+}
+
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+    <h1 class="h3 mb-0">Pedidos</h1>
+    <a asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Novo pedido</a>
+</div>
+
+<form asp-action="Index" method="get" class="row g-2 align-items-center mb-3">
+    <div class="col-auto">
+        <label for="status" class="col-form-label fw-semibold">Status</label>
+    </div>
+    <div class="col-auto">
+        <select id="status" name="status" class="form-select" asp-items="@(ViewData["Status"] as SelectList)">
+            <option value="">Todos</option>
+        </select>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-outline-secondary"><i class="bi bi-funnel"></i> Filtrar</button>
+        @if (statusSelecionado.HasValue)
+        {
+            <a asp-action="Index" class="btn btn-link">Limpar filtro</a>
+        }
+    </div>
+</form>
+
+@if (!Model.Any())
+{
+    <p class="text-muted fst-italic">@Mensagens.NenhumPedido</p>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-hover align-middle bg-white border">
+            <thead class="table-light">
+                <tr>
+                    <th>Nº</th>
+                    <th>Cliente</th>
+                    <th class="d-none d-sm-table-cell">Data</th>
+                    <th>Status</th>
+                    <th class="text-end">Total</th>
+                    <th class="text-end">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pedido in Model)
+                {
+                    <tr>
+                        <td>@pedido.Id</td>
+                        <td>@(pedido.Cliente?.Nome)</td>
+                        <td class="d-none d-sm-table-cell">@pedido.DataPedido.ToString("dd/MM/yyyy")</td>
+                        <td><span class="badge @pedido.Status.CorEtiqueta()">@pedido.Status</span></td>
+                        <td class="text-end text-nowrap">@pedido.CalcularTotal().ToString("C")</td>
+                        <td class="text-end">
+                            <a asp-action="Details" asp-route-id="@pedido.Id" class="btn btn-sm btn-outline-primary"><i class="bi bi-eye"></i> Detalhes</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <p class="text-muted small">Mostrando @Model.Count() pedido(s), do mais recente para o mais antigo.</p>
+}

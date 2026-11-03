@@ -38,8 +38,13 @@ classDiagram
         +ICollection~ItemPedido~ Itens
         +CalcularSubtotal() decimal
         +CalcularTotal() decimal
+        +CalcularValorDesconto() decimal
         +PodeEditar() bool
+        +PodeMudarPara(StatusPedido novoStatus) bool
         +AlterarStatus(StatusPedido novoStatus) void
+        +DefinirDesconto(decimal percentual) void
+        +AdicionarItem(Produto produto, int quantidade) ItemPedido
+        +RemoverItem(int itemId) ItemPedido
     }
 
     class ItemPedido {
@@ -82,7 +87,13 @@ classDiagram
 | `Pedido.CalcularSubtotal()` | RN04 | Soma dos subtotais de todos os itens |
 | `Pedido.CalcularTotal()` | RN04 | Subtotal × (1 − DescontoPercentual ÷ 100), arredondado em 2 casas |
 | `Pedido.PodeEditar()` | RN05 | Retorna verdadeiro somente se o status for Aberto |
+| `Pedido.PodeMudarPara(novo)` | RN06 | Diz se a mudança de status é permitida (usado para mostrar só os botões válidos) |
 | `Pedido.AlterarStatus(novo)` | RN06, RN07 | Valida a transição e o número de itens; se for inválida, gera um erro com a mensagem adequada |
+| `Pedido.DefinirDesconto(%)` | RN03, RN05 | Aceita de 0% a 30% e só em pedido Aberto |
+| `Pedido.AdicionarItem(produto, qtd)` | RN02, RN05, RN09 | Valida a quantidade, copia o preço atual do produto e soma a quantidade se o produto já estiver no pedido |
+| `Pedido.RemoverItem(id)` | RN05 | Remove o item, só em pedido Aberto |
+
+Quando uma regra é violada, os métodos lançam `RegraNegocioException` com a mensagem pronta para o usuário (catálogo de mensagens). O Controller captura o erro e mostra a mensagem em vermelho.
 
 Colocar as regras dentro da classe `Pedido` deixa o Controller mais simples e permite testar as regras com testes unitários, sem precisar de banco de dados nem de tela.
 
@@ -118,9 +129,14 @@ classDiagram
         +Create()
         +Details(int id)
         +AtualizarDesconto(int id, decimal desconto)
-        +AdicionarItem(int pedidoId, int produtoId, int quantidade)
-        +RemoverItem(int itemId)
+        +AdicionarItem(int id, int produtoId, int quantidade)
+        +RemoverItem(int id, int itemId)
         +AlterarStatus(int id, StatusPedido novoStatus)
+    }
+    class ContaController {
+        +Entrar()
+        +Registrar()
+        +Sair()
     }
     class ApplicationDbContext {
         +DbSet~Cliente~ Clientes
@@ -133,9 +149,10 @@ classDiagram
     Controller <|-- ClientesController
     Controller <|-- ProdutosController
     Controller <|-- PedidosController
+    Controller <|-- ContaController
     ClientesController --> ApplicationDbContext
     ProdutosController --> ApplicationDbContext
     PedidosController --> ApplicationDbContext
 ```
 
-Todos os Controllers têm o atributo `[Authorize]`: só usuários logados acessam (RNF04). A autenticação (criar conta, login e logout) usa as telas prontas do **ASP.NET Core Identity**.
+Os Controllers de Clientes, Produtos e Pedidos têm o atributo `[Authorize]`: só usuários logados acessam (RNF04). O `ContaController` cria a conta, faz o login e o logout usando o **ASP.NET Core Identity** (senhas guardadas com hash), com telas próprias em português.

@@ -1,0 +1,43 @@
+/* PedidoFácil – estilos complementares ao Bootstrap 5 */
+
+body {
+    background-color: #f6f8fb;
+}
+
+.navbar-brand {
+    letter-spacing: .2px;
+}
+
+.navbar .nav-link.active {
+    font-weight: 600;
+    color: var(--bs-primary) !important;
+    border-bottom: 2px solid var(--bs-primary);
+}
+
+.table > :not(caption) > * > * {
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+}
+
+.cartao-resumo {
+    transition: box-shadow .15s ease, transform .15s ease;
+}
+
+.cartao-resumo:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .08);
+    transform: translateY(-2px);
+}
+
+/* Campo com erro de validação (jQuery Validation) */
+.input-validation-error {
+    border-color: var(--bs-danger) !important;
+}
+
+.field-validation-error {
+    display: block;
+    margin-top: .25rem;
+}
+
+.validation-summary-valid {
+    display: none;
+}
