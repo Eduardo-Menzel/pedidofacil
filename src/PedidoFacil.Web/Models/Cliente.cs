@@ -34,7 +34,7 @@ public class Cliente
     public string? Cidade { get; set; }
 
     [Display(Name = "UF")]
-    [StringLength(2, MinimumLength = 2, ErrorMessage = "Informe a sigla do estado com 2 letras.")]
+    [RegularExpression("^[A-Z]{2}$", ErrorMessage = "Informe a sigla do estado com 2 letras.")]
     public string? UF { get; set; }
 
     [Display(Name = "Data de cadastro")]
